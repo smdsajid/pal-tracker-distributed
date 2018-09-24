@@ -20,10 +20,8 @@ public class App {
     }
 
     @Bean
-    ProjectClient projectClient(
-        RestOperations restOperations,
-        @Value("${registration.server.endpoint}") String registrationEndpoint
-    ) {
+    ProjectClient projectClient(RestOperations restOperations, @Value("${registration.server.endpoint}") String registrationEndpoint)
+    {
         return new ProjectClient(restOperations, registrationEndpoint);
     }
 }
